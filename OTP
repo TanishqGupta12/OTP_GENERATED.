@@ -1,0 +1,26 @@
+***************************code***************************
+import java.util.*;
+import java.util.Random;
+
+class otp {
+
+    static char[] otps(int lenght){
+        System.out.println("**********Otp Generated**********");
+       String value="123456789";
+        Random rand = new Random();
+       
+       char[]password = new char[lenght];
+        for(int i=1;i<lenght;i++)
+        {
+         password[i] =value.charAt(rand.nextInt(value.length()));
+        }
+        return password;
+    }
+    public static void main(String[] args)
+    {
+       
+        System.out.println("********** Waiting********** ");
+        int length = 5;
+         System.out.println(otps(length));
+    }
+}
